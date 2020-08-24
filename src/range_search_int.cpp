@@ -36,7 +36,7 @@ cmd_line_parser::parser make_parser(int argc, char** argv) {
     p.add("algorithm", "algorithm (array|art|mart)", "-A", false);
     p.add("splitthr", "split threshold (0 means optimal assignment)", "-T", false);
     p.add("in_weight", "weigth of innode", "-W", false);
-    p.add("blocks", "number of blocks", "-K", false);
+    p.add("blocks", "number of blocks (0 means reasonable number based on radius)", "-K", false);
 #endif
     ABORT_IF(!p.parse());
     return p;
