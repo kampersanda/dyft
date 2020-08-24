@@ -30,7 +30,7 @@ The library contains some implementations of data structures in addition to our 
 - `mart_index` is an implementation of DyFT with MART representation.
 - `art_index` is an implementation of DyFT with ART representation.
 - `array_index` is an implementation of DyFT with Array representation.
-- `mi_frame<T>` takes one of the DyFT classes as template argument `T` and implements DyFT+ (i.e., the multi-index variant) for the class.
+- `mi_frame<T>` is an implementation of DyFT+ (i.e., multi-index variant) for the index which is specified by the template argument `T` of a DyFT class.
 
 ### Others
 
@@ -109,7 +109,7 @@ $ ./bin/build_index_int_dyft ../data/mnist.scale.cws.bvecs -o results -R 4 -N 64
 
 The command builds `mi_frame<mart_index>` with a reasonable number of blocks on radius `R=4` for dataset `mnist.scale.cws.bvecs`, where the number of dimension is `N=64` and the lowest `B=4` bits are used for each feature.
 
-When setting `K` to 0, the number of blocks is set to ⌊`R`/2⌋+1 following the idea of GV.
+When `K` is set to 0, the number of blocks is set to ⌊`R`/2⌋+1 following the idea of GV.
 
 #### Example: HSV on binary sketches
 
@@ -127,10 +127,10 @@ If you use the library, please cite the following paper:
 
 ```latex
 @inproceedings{kanda2020dynamic,
-	author = {Kanda, Shunsuke and Tabei, Yasuo},
-	title = {Dynamic Similarity Search on Integer Sketches},
-	booktitle = {proceedings of the 20th IEEE International Conference on Data Mining (ICDM)},
-	year = {to appear}
+  author = {Kanda, Shunsuke and Tabei, Yasuo},
+  title = {Dynamic Similarity Search on Integer Sketches},
+  booktitle = {Proceedings of the 20th IEEE International Conference on Data Mining (ICDM)},
+  year = {to appear}
 }
 ```
 
