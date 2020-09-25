@@ -1,6 +1,6 @@
 # Dynamic Filter Trie (DyFT)
 
-A C++17 implementation of the data structures described in the paper, Shunsuke Kanda and Yasuo Tabei "Dynamic Similarity Search on Integer Sketches," IEEE ICDM 2020, to appear.
+A C++17 implementation of the data structures described in the paper, Shunsuke Kanda and Yasuo Tabei "[Dynamic Similarity Search on Integer Sketches](https://arxiv.org/abs/2009.11559)," IEEE ICDM 2020, to appear.
 
 ## Build instructions
 
@@ -36,7 +36,7 @@ The library contains some implementations of data structures in addition to our 
 
 - `hms1v_index` is an implementation of [HmSearch 1-var (HSV)](https://doi.org/10.1145/2484838.2484842), which is designed for binary sketches.
 - `hms1dv_index` is an implementation of [HmSearch 1-del-var (HSD)](https://doi.org/10.1145/2484838.2484842), which is designed for integer sketches.
-- `gv_index` is an implementation of multi-index hashing for integer sketches, which follows the idea by [Gog and Venturini](https://doi.org/10.1145/2911451.2911523).
+- `gv_index` is an implementation of multi-index hashing for integer sketches, which follows an idea by [Gog and Venturini](https://doi.org/10.1145/2911451.2911523).
 
 ## Input data format
 
@@ -130,7 +130,7 @@ If you use the library, please cite the following paper:
   author = {Kanda, Shunsuke and Tabei, Yasuo},
   title = {Dynamic Similarity Search on Integer Sketches},
   booktitle = {Proceedings of the 20th IEEE International Conference on Data Mining (ICDM)},
-  year = {to appear}
+  year = {2020}
 }
 ```
 
