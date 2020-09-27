@@ -1,6 +1,6 @@
 # Dynamic Filter Trie (DyFT)
 
-A C++17 implementation of the data structures described in the paper, Shunsuke Kanda and Yasuo Tabei "[Dynamic Similarity Search on Integer Sketches](https://arxiv.org/abs/2009.11559)," IEEE ICDM 2020, to appear.
+A C++17 implementation of data structures described in the paper: Shunsuke Kanda and Yasuo Tabei, "Dynamic Similarity Search on Integer Sketches," IEEE ICDM 2020, to appear [[arXiv](https://arxiv.org/abs/2009.11559)].
 
 ## Build instructions
 
@@ -42,13 +42,13 @@ The library contains some implementations of data structures in addition to our 
 
 ### Binary sketches
 
-Binary sketches should be stored in binary format, where each sketch is 64 bits of size. The executables provided can indicate the number of dimensions (32 or 64) to evaluate through argument `-N`.
+Binary sketches should be stored in binary format, where each sketch is 64 bits of size. The executables provided by the library can indicate the number of dimensions (32 or 64) to evaluate through argument `-N`, and use the first `N` dimensions.
 
 You can use `src/simhash.cpp` to generate such a dataset using [Charikar’s simhash](https://doi.org/10.1145/509907.509965) algorithm.
 
 ### Integer sketches
 
-Integer sketches should be stored in [TEXMEX's bvecs format](http://corpus-texmex.irisa.fr/). That is, the dimension number and features for each sketch are interleaved, where the number is 4 bytes of size and each feature is 1 byte of size. In the same manner, the executables provided can indicate the dimension number (32 or 64) to evaluate through argument `-N`. And, argument `-B` can indicate the number of lowest bits to evaluate for each feature (1 to 8).
+Integer sketches should be stored in [TEXMEX's bvecs format](http://corpus-texmex.irisa.fr/). That is, the dimension number and features for each sketch are interleaved, where the number is 4 bytes of size and each feature is 1 byte of size. In the same manner, the executables provided by the library can indicate the dimension number (32 or 64) to evaluate through argument `-N`. And, argument `-B` can indicate the number of lowest bits to evaluate for each feature (1 to 8).
 
 You can use [consistent\_weighted\_sampling](https://github.com/kampersanda/consistent_weighted_sampling) to generate such a dataset using the [GCWS](https://doi.org/10.1145/3097983.3098081) algorithm.
 
@@ -71,7 +71,7 @@ The executables `range_search_*` are used to analyze the performance of range se
 $ ./bin/range_search_bin_dyft ../data/SIFT.10K.bin ../data/SIFT.100.bin -o results -R 2 -N 32 -A mart -K 1
 ```
 
-The command tests range search with radius `R=2` for `mart_index` of single index (`K=1`) through dataset `SIFT.10K.bin` and queryset `SIFT.100.bin`, where the number of dimension is `N=32`. The benchmark result is output in `results` directory, where the file name is assigned automatically.
+The command tests range search with radius `R=2` for `mart_index` of single index (`K=1`) through dataset `SIFT.10K.bin` and queryset `SIFT.100.bin`, where the number of dimensions is `N=32` (i.e., the first 32 dimensions are used). The benchmark result is output in `results` directory, where the file name is assigned automatically.
 
 #### Example: DyFT+ with ART on integer sketches
 
@@ -79,7 +79,7 @@ The command tests range search with radius `R=2` for `mart_index` of single inde
 $ ./bin/range_search_int_dyft ../data/mnist.scale.cws.bvecs ../data/mnist.scale.1K.cws.bvecs -o results -R 4 -N 64 -B 4 -A art -K 3
 ```
 
-The command tests range search with radius `R=4` for `mi_frame<art_index>` of `K=3` blocks through dataset `mnist.scale.cws.bvecs` and queryset `mnist.scale.1K.cws.bvecs`, where the number of dimension is `N=64` and the lowest `B=4` bits are used for each feature.
+The command tests range search with radius `R=4` for `mi_frame<art_index>` of `K=3` blocks through dataset `mnist.scale.cws.bvecs` and queryset `mnist.scale.1K.cws.bvecs`, where the number of dimensions is `N=64` and the lowest `B=4` bits are used for each feature.
 
 #### Example: GV on integer sketches
 
@@ -87,7 +87,7 @@ The command tests range search with radius `R=4` for `mi_frame<art_index>` of `K
 $ ./bin/range_search_int_gv ../data/mnist.scale.cws.bvecs ../data/mnist.scale.1K.cws.bvecs -o results -R 6 -N 64 -B 8
 ```
 
-The command tests range search with radius `R=6` for `gv_index` through dataset `mnist.scale.cws.bvecs` and queryset `mnist.scale.1K.cws.bvecs`, where the number of dimension is `N=64` and all the `B=8` bits are used for each feature.
+The command tests range search with radius `R=6` for `gv_index` through dataset `mnist.scale.cws.bvecs` and queryset `mnist.scale.1K.cws.bvecs`, where the number of dimensions is `N=64` and all the `B=8` bits are used for each feature.
 
 ### Benchmark for construction
 
