@@ -1,6 +1,9 @@
 # Dynamic Filter Trie (DyFT)
 
-A C++17 implementation of data structures described in the paper: Shunsuke Kanda and Yasuo Tabei, "Dynamic Similarity Search on Integer Sketches," IEEE ICDM 2020, to appear [[arXiv](https://arxiv.org/abs/2009.11559)].
+This is an experimental library for data structures described in the following papers:
+
+- Shunsuke Kanda and Yasuo Tabei, [Dynamic Similarity Search on Integer Sketches](https://ieeexplore.ieee.org/document/9338383/), In *Proc. 20th IEEE ICDM*, pp 242–251, 2020 [[arXiv](https://arxiv.org/abs/2009.11559)]
+- Shunsuke Kanda and Yasuo Tabei, [DyFT: A Dynamic Similarity Search Method on Integer Sketches](https://link.springer.com/article/10.1007%2Fs10115-021-01611-2), *Knowledge and Information Systems*, 63, 2815–2840, 2021 [SharedIt](https://rdcu.be/cxu1J)
 
 ## Build instructions
 
@@ -125,11 +128,12 @@ This library is free software provided under [MIT License](https://github.com/ka
 
 If you use the library, please cite the following paper:
 
-```latex
+```
 @inproceedings{kanda2020dynamic,
   author = {Kanda, Shunsuke and Tabei, Yasuo},
   title = {Dynamic Similarity Search on Integer Sketches},
   booktitle = {Proceedings of the 20th IEEE International Conference on Data Mining (ICDM)},
+  pages={242-251},
   year = {2020}
 }
 ```
