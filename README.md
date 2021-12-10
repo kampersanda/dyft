@@ -3,7 +3,7 @@
 This is an experimental library for data structures described in the following papers:
 
 - Shunsuke Kanda and Yasuo Tabei, [Dynamic Similarity Search on Integer Sketches](https://ieeexplore.ieee.org/document/9338383/), In *Proc. 20th IEEE ICDM*, pp 242–251, 2020 [[arXiv](https://arxiv.org/abs/2009.11559)]
-- Shunsuke Kanda and Yasuo Tabei, [DyFT: A Dynamic Similarity Search Method on Integer Sketches](https://link.springer.com/article/10.1007%2Fs10115-021-01611-2), *Knowledge and Information Systems*, 63, 2815–2840, 2021 [SharedIt](https://rdcu.be/cxu1J)
+- Shunsuke Kanda and Yasuo Tabei, [DyFT: A Dynamic Similarity Search Method on Integer Sketches](https://link.springer.com/article/10.1007%2Fs10115-021-01611-2), *Knowledge and Information Systems*, 63, 2815–2840, 2021 [[SharedIt](https://rdcu.be/cxu1J)]
 
 ## Build instructions
 
